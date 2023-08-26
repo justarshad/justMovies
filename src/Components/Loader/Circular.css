@@ -1,0 +1,33 @@
+.Circular {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30rem;
+}
+
+.Circular .outer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: conic-gradient(var(--brandColor) 0deg, var(--brandColorDark) 300deg, #fff 360deg);
+    height: 5rem;
+    width: 5rem;
+    border-radius: 100rem;
+    animation: circleLoading 1s linear infinite;
+}
+
+.Circular .outer .inner {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 100rem;
+    background-color: var(--mainBg);
+}
+
+@keyframes circleLoading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

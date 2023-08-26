@@ -1,0 +1,25 @@
+.SearchResult {
+    padding: var(--containerPadding);
+}
+
+.SearchResult>h1 {
+    font-size: 1.2rem;
+    color: var(--headingColor);
+    margin: 6rem 0 1.2rem 0;
+    font-weight: 400;
+}
+.SearchResult>h1 span{
+    color: var(--textColor);
+}
+
+.SearchResult .container {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+}
+.SearchResult .container .loderContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

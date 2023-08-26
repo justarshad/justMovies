@@ -1,0 +1,55 @@
+.VideoPlayer {
+    position: fixed;
+    top: -110%;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 101;
+    backdrop-filter: blur(8px);
+}
+.VideoPlayer.active{
+    top: 0;
+}
+
+.VideoPlayer .videoContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--headingColor);
+    width: 50vw;
+    aspect-ratio: 16/9;
+}
+
+.VideoPlayer .videoContainer .upper {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.2rem;
+    font-size: 3.2rem;
+}
+
+
+@media (max-width:1200px) {
+    .VideoPlayer .videoContainer {
+        width: 55vw;
+    }
+}
+
+@media (max-width:1080px) {
+    .VideoPlayer .videoContainer {
+        width: 60vw;
+    }
+}
+
+@media (max-width:768px) {
+    .VideoPlayer .videoContainer {
+        width: 70vw;
+    }
+}
+
+@media (max-width:480px) {
+
+    .VideoPlayer .videoContainer {
+        width: 80vw;
+    }
+}

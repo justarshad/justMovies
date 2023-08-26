@@ -1,0 +1,20 @@
+.Rating {
+    height: 3.2em;
+    width: 3.2em;
+    border-radius: 50%;
+    border: 0.32em solid var(--pureWhite);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Rating .inner {
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--pureWhite);
+    color: var(--pureBlack);
+}

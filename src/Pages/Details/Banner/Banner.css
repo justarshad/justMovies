@@ -1,0 +1,156 @@
+.Banner {
+    position: relative;
+}
+
+.Banner.skeleton {
+    height: max-content;
+    width: 100vw;
+}
+
+.Banner .mainBg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -2;
+    opacity: 0;
+    transition: opacity 0.6s linear;
+}
+
+.Banner .mainBg.loaded {
+    opacity: 1;
+}
+
+.Banner .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: var(--overlayGradient);
+    z-index: -1;
+}
+
+.Banner .content {
+    padding: var(--containerPadding);
+    padding-top: 6rem;
+    display: flex;
+    gap: 2.8rem;
+    background: var(--overlayGradient);
+}
+
+.Banner .content .posterImgContainer {
+    flex-grow: 1;
+    overflow: hidden;
+    flex-basis: 30%;
+}
+
+.Banner .content .posterImgContainer img {
+    width: 100%;
+    opacity: 0;
+    border-radius: 1.2rem;
+    transition: opacity 0.6s linear;
+}
+
+.Banner .content .posterImgContainer img.loaded {
+    opacity: 1;
+}
+
+.Banner .content .right {
+    flex-grow: 1;
+    flex-basis: 70%;
+}
+
+.Banner .content .right>div {
+    margin-bottom: 1.2rem;
+}
+
+.Banner .content .right .naming .title {
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin-bottom: 0.4rem;
+    color: var(--headingColor);
+}
+
+.Banner .content .right .naming .tagline {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--headingColorLight);
+    font-style: italic;
+}
+
+.Banner .content .right .ratingAndTraler{
+    display: flex;
+    gap: 1.4rem;
+}
+.Banner .content .right .ratingAndTraler .trailer {
+    display: flex;
+    gap: 0.6rem;
+    font-size: 1.2rem;
+    color: var(--headingColor);
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.4s linear;
+}
+
+.Banner .content .right .ratingAndTraler .trailer:hover {
+    color: var(--brandColor);
+}
+
+.Banner .content .right .ratingAndTraler .trailer svg {
+    font-size: 2.8rem;
+}
+
+.Banner .content .right .overview {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.Banner .content .right .overview span {
+    font-size: 1.6rem;
+    color: var(--headingColorLight);
+}
+
+.Banner .content .right .overview p {
+    font-size: 1.16rem;
+    line-height: 1.6rem;
+    color: var(--textColor);
+}
+
+.Banner .content .right .info>div {
+    border-bottom: .08rem solid #323232;
+    padding: 1.2rem 0;
+}
+
+.Banner .content .right .info>div:first-child {
+    display: flex;
+    gap: 1.4rem;
+}
+
+.Banner .content .right .info .keyValue .key {
+    font-size: 1.2rem;
+    color: var(--headingColorLight);
+    margin-right: 0.8rem;
+}
+
+.Banner .content .right .info .keyValue .value {
+    font-size: 1rem;
+    color: var(--textColorLight);
+}
+
+
+@media (max-width:1080px) {
+    .Banner .content .posterImgContainer {
+        flex-basis: 45%;
+    }
+
+    .Banner .content .right {
+        flex-basis: 55%;
+    }
+}
+
+@media (max-width:650px) {
+    .Banner .content {
+        flex-wrap: wrap;
+    }
+}

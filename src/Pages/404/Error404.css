@@ -1,0 +1,30 @@
+.Error404 {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.Error404 h1 {
+    font-size: 12rem;
+    color: var(--headingColor);
+}
+
+.Error404 span {
+    font-size: 3rem;
+    color: var(--headingColorLight);
+}
+
+.Error404 button {
+    padding: 1rem 3rem;
+    border-radius: 100rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-image: linear-gradient(90deg, var(--brandColor), var(--brandColorDark));
+    color: var(--textColor);
+    font-size: 1.6rem;
+}

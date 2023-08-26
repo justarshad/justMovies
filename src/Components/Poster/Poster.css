@@ -1,0 +1,99 @@
+.Poster {
+    width: calc(20% - 1rem);
+    flex-shrink: 0;
+    margin: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.Poster .ratingAndGenres {
+    position: relative;
+}
+
+.Poster .ratingAndGenres .Rating {
+    position: absolute;
+    top: -0.5rem;
+    right: 0.5rem;
+    transform: translateY(-100%);
+}
+
+.Poster .imgContainer {
+    width: 100%;
+}
+
+.Poster .imgContainer.skeleton {
+    width: 100%;
+    height: 20rem;
+}
+
+.Poster .imgContainer img {
+    width: 100%;
+    border-radius: 0.46rem;
+    opacity: 0;
+    transition: opacity 0.8s linear;
+}
+
+.Poster .imgContainer img.loaded {
+    opacity: 1;
+}
+
+.Poster .title {
+    margin-top: 0.4rem;
+    font-size: 1.06rem;
+    color: var(--headingColor);
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.4s ease;
+}
+
+.Poster .title:hover {
+    color: var(--brandColor);
+}
+
+.Poster .releaseDate {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--textColor);
+    font-weight: 600;
+}
+
+.Poster .img.skeleton {
+    height: 18rem;
+}
+
+.Poster .title.skeleton {
+    height: 1.06rem;
+}
+
+.Poster .releaseDate.skeleton {
+    height: 0.8rem;
+}
+
+@media (max-width:1200px) {
+    .Poster {
+        width: calc(25% - 1rem);
+        margin: 0 0.5rem;
+    }
+}
+
+@media (max-width:1080px) {
+    .Poster {
+        width: calc(33.3333% - 1rem);
+        margin: 0 0.5rem;
+    }
+}
+
+@media (max-width:768px) {
+    .Poster {
+        width: calc(50% - 1rem);
+        margin: 0 0.5rem;
+    }
+}
+
+@media (max-width:480px) {
+
+    .Poster {
+        width: calc(100% - 1rem);
+        margin: 0 0.5rem;
+    }
+}
